@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Shoppin Cart</title>
+	<meta charset="utf-8" />
+	<link href="shopping.css" rel="stylesheet" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="shopping.js"></script>
+	
+</head>
+<body>
+	<main id="itemPage">
+		<section id="itemInfo">
+			<form method="post">
+
+				<div class="InputRow">
+					<h1>Shopping Cart</h1>
+					<label>Invoice Date:</label>
+					<input required name="invoiceDate" id="invoiceDate" type="date" class="validated"/>
+				</div>
+				<div class="InputRow">
+					<label>Item ID:</label>
+					<input id="itemID" type="text" required class="validated" name="itemID"  pattern="[0-9]{8}"/>
+				</div>
+				<div class="InputRow">
+					<label>Item Name:</label>
+					<input id="itemName" type="text" required class="validated" name="itemName" pattern=".{5,25}"/>
+				</div>
+				<div class="InputRow">
+					<label>Description:</label>
+					<textarea  required id="description" class="validated" maxlength="300" cols="30" rows="2" name="description" type="text"></textarea>
+				</div>
+
+				<div class="InputRow">
+					<label>Item Quantity:</label>
+					<input id="quantity" type="number" required class="validated" name="quantity" min="1" pattern="[0-9]" />
+				</div>
+
+				<div class="InputRow">
+					<label>Item Unit Price:</label>
+					<input id="unitPrice" type="number" required class="validated" name="unitPrice" min="0.01" step="0.01"/>
+				</div>
+
+
+				<div class="InputRow">
+					<label>Item Cost:</label>
+					<input id="cost" type="number"  name="cost" />
+					<input id="save" type="submit" value="Add to cart"/>
+				</div>
+
+			</form>
+		</section>
+		<section id="itemList">
+			<div>
+				<table>
+					<thead>
+						<tr>
+							<th>Item ID</th>
+							<th>Name</th>
+							<th>Description</th>
+							<th>Quantity</th>
+							<th>Unit Price</th>
+							<th>Item Cost</th>
+							<th>Remove from Cart</th>
+				
+						</tr>
+					</thead>
+					<tbody></tbody>
+				</table>
+			</div>
+
+			<div class="outRow">
+				<input class="emptyCart"  id="emptyCart" type="submit" value="Empty Cart" /><!--deletes all saved contact data-->
+			</div>
+		</section>
+
+
+		<section id="costOutput">
+			<div class="outRow">
+				
+				<label>Subtotal</label>
+				<output id="subTotal" type="number" name="subtotal" />
+				
+			</div>
+			<div class="outRow">
+				<label>Shipping</label>
+				<output id="shipping" type="number" name="shipping" />
+			</div>
+			<div class="outRow">
+				<label>Tax</label>
+				<output id="tax" type="number" name="tax" />
+			</div>
+			<div class="outRow">
+				<label>Total</label>
+				<output id="total" type="number" name="total" />
+				
+			</div>
+
+			
+</section>
+</main>
+	
+
+</body>
+</html>

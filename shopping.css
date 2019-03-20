@@ -1,0 +1,56 @@
+﻿body {
+}
+.validated:valid{
+	
+background:lightblue;
+}
+
+.validated:invalid {
+
+	background-color:lightsalmon;
+}
+
+label {
+	width:110px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+input {
+	width:200px;
+	margin:5px
+}
+
+#save,#emptyCart {
+	width:100px;
+	padding: 0px  0px 0px -4px;
+}
+.contactRow {
+	margin-bottom:10px;
+}
+table, th,td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding:5px;
+	text-align:left;
+}
+
+th, td {
+	width: 200px;
+	height:10px;
+}
+
+#itemInfo,#itemList,#costOutput {
+	width:1000px;
+	border:1px solid lightgreen;
+	padding:15px;
+	margin:10px
+
+}
+
+
+th {
+	background-color:cornflowerblue;
+}
+
+
